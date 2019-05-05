@@ -19,6 +19,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  
+  # 网络库
+  dio: ^2.0.2
+  # JSON序列化、反序列化
+  json_annotation: ^2.0.0
+  # JSON转换器
+  dio_flutter_transformer: ^2.0.10
+  # flutter_bloc框架
+  flutter_bloc: ^0.11.1
+  # 简单实现equasl和hashCode
+  equatable: ^0.2.3
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -27,6 +38,10 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+    
+  # JSON序列化、反序列化
+  build_runner: ^1.0.0
+  json_serializable: ^2.0.0
 
 
 # For information on the generic Dart part of this file, see the
