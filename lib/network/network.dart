@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:dio/dio.dart';
 import 'package:dio_flutter_transformer/dio_flutter_transformer.dart';
+import 'package:dio/dio.dart';
 
 const String HOST = "https://jsonplaceholder.typicode.com";
 
@@ -53,11 +53,11 @@ class AuthInterceptor extends Interceptor {
 void main() {
   Future<Response<String>> future = Network.network
       .dio()
-      .get("http://www.baidu.com", queryParameters: {"key1": 123, "key2": 456});
+      .get("/posts", queryParameters: {"_start": 0, "_limit": 20});
   future.catchError((error) {
     print("error = $error");
   }).then((response) {
-    print("response = 成功");
+    print("response = ${response.data}");
   }).whenComplete(() {
     print("完成");
   });
@@ -67,6 +67,7 @@ class RequestException extends IOException {
   final int code;
   final String message;
   final dynamic error;
+
   RequestException({this.code, this.message, this.error});
 }
 
@@ -76,6 +77,7 @@ class SimpleRequestException extends RequestException {
 
   @override
   int get code => -1;
+
   @override
   String get message => "加载失败，请稍候重试";
 

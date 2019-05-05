@@ -68,3 +68,9 @@
 !**/ios/**/default.pbxuser
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+android/app/.settings/org.eclipse.buildship.core.prefs
+android/app/.project
+android/app/.classpath
+android/.settings/org.eclipse.buildship.core.prefs
+android/.settings/org.eclipse.buildship.core.prefs
+android/.settings/org.eclipse.buildship.core.prefs
