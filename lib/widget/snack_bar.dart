@@ -78,6 +78,8 @@ class SnackBarWidgetState extends State<SnackBarWidget>
             controller: _controller,
             child: Container(
               key: _childKey,
+              // 如果存在textBuilder，则创建_DynamicText，用来动态更新Text的内容
+              // 如果不存在textBuilder，则使用静态的Text
               child: widget.textBuilder != null
                   ? _DynamicText(
                       widget.textBuilder,

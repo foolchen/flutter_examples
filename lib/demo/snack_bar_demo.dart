@@ -13,7 +13,7 @@ class SnackApp extends StatelessWidget {
         theme: ThemeData(primarySwatch: Colors.blue),
         home: Scaffold(
           appBar: AppBar(
-            title: Text("SnackDemo"),
+            title: Text("SnackBar"),
             actions: <Widget>[
               InkWell(
                 child: Padding(
